@@ -8,7 +8,9 @@
 </head>
 
 <body>
-    <h3 id="arithmetic"></h3>
+    <h3 id="arithmetic1"></h3>
+    <h3 id="arithmetic2"></h3>
+
     <script>
         let x = 10;
         let y = " saya belajar javascript";
@@ -17,8 +19,23 @@
         // console view
         console.log(z);
 
+        // z is being coerced into string 
+        console.log(typeof z);
+
         // HTML view
-        document.getElementById("arithmetic").innerHTML = z;
+        document.getElementById("arithmetic1").innerHTML = z;
+
+        // numeric + string shouldn't be added together
+        let var3 = 5;
+        let result = x + var3;
+
+        console.log(result)
+
+        // data type is on numeric
+        console.log(typeof result);
+
+        // HTML view
+        document.getElementById("arithmetic2").innerHTML = result;
     </script>
 </body>
 
