@@ -1,4 +1,4 @@
-describe("Sort Product Test Cases for Standard User", { testIsolation: false }, () => {
+describe("Sort Product Test", { testIsolation: false }, () => {
   before(() => {
     cy.clearCookies();
     cy.clearLocalStorage();
@@ -19,18 +19,42 @@ describe("Sort Product Test Cases for Standard User", { testIsolation: false }, 
     cy.check_login("success");
   });
 
-  // it("Should sort product list in ascending alphabetical order", () => {
-  //   // code
-  // });
+  it("Should sort product list in ascending alphabetical order", () => {
+    cy.get("[data-test=product_sort_container]").select("az");
 
-  // it("Should sort product list in descending alphabetical order", () => {
-  //   // code
-  // });
+    let productNames = []; // Initialize an empty array to store product names
+
+    cy.get(".inventory_item_name").each(($item) => {
+      const itemName = $item.text();
+      productNames.push(itemName); // Push the product name to the array
+    });
+
+    cy.wrap(productNames).then(($array) => {
+      // Check if the array is sorted alphabetically
+      cy.wrap($array).should("deep.eq", $array.slice().sort());
+    });
+  });
+
+  it("Should sort product list in descending alphabetical order", () => {
+    cy.get("[data-test=product_sort_container]").select("za");
+
+    let productNames = []; // Initialize an empty array to store product names
+
+    cy.get(".inventory_item_name").each(($item) => {
+      const itemName = $item.text();
+      productNames.push(itemName); // Push the product name to the array
+    });
+
+    cy.wrap(productNames).then(($array) => {
+      // Check if the array is sorted alphabetically in descending order
+      cy.wrap($array).should("deep.eq", $array.slice().sort().reverse());
+    });
+  });
 
   it("Should sort product list from low price to high price", () => {
     cy.get("[data-test=product_sort_container]").select("lohi");
 
-    let myArray = []; // Initialize an empty array to store prices
+    let productPrices = []; // Initialize an empty array to store product prices
 
     cy.get(".inventory_item_price").each(($item) => {
       const itemText = $item.text();
@@ -38,9 +62,9 @@ describe("Sort Product Test Cases for Standard User", { testIsolation: false }, 
       // Remove the '$' sign and convert to a floating-point number
       const price = parseFloat(itemText.replace("$", ""));
 
-      myArray.push(price); // Push the price to the array
+      productPrices.push(price); // Push the price to the array
     });
-    cy.wrap(myArray).then(($array) => {
+    cy.wrap(productPrices).then(($array) => {
       // Check if the array is sorted in ascending order
       cy.wrap($array).should(
         "deep.eq",
@@ -52,7 +76,7 @@ describe("Sort Product Test Cases for Standard User", { testIsolation: false }, 
   it("Should sort product list from high price to low price", () => {
     cy.get("[data-test=product_sort_container]").select("hilo");
 
-    let myArray = []; // Initialize an empty array to store prices
+    let productPrices = []; // Initialize an empty array to store product prices
 
     cy.get(".inventory_item_price").each(($item) => {
       const itemText = $item.text();
@@ -60,9 +84,9 @@ describe("Sort Product Test Cases for Standard User", { testIsolation: false }, 
       // Remove the '$' sign and convert to a floating-point number
       const price = parseFloat(itemText.replace("$", ""));
 
-      myArray.push(price); // Push the price to the array
+      productPrices.push(price); // Push the price to the array
     });
-    cy.wrap(myArray).then(($array) => {
+    cy.wrap(productPrices).then(($array) => {
       // Check if the array is sorted in descending order
       cy.wrap($array).should(
         "deep.eq",
