@@ -10,6 +10,10 @@ describe("PokeAPI Tests", () => {
       expect(response.body).to.have.property("id", 25);
       expect(response.body).to.have.property("height", 4);
       expect(response.body).to.have.property("weight", 60);
+
+      // Assert on nested JSON value
+      expect(response.body.abilities[0].ability.name).to.eq("static");
+      expect(response.body.abilities[1].ability.name).to.eq("lightning-rod");
     });
   });
 });
