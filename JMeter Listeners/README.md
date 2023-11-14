@@ -4,11 +4,11 @@ Setiap metode display pada JMeter listener memiliki kegunaan dan kelebihannya ma
 
 ### [Metode Table]
 
-**Metode Table** menampilkan data dalam format tabel yang terstruktur dengan jelas. Ini membuat informasi menjadi lebih terorganisir, mudah dibaca, dan dipahami. Setiap baris tabel mewakili sebuah sampel tes yang dilakukan, dengan kolom-kolom yang menyajikan informasi spesifik seperti waktu respon, kode status, waktu pengiriman permintaan, dan lainnya.
+Metode Table menampilkan data dalam format tabel yang terstruktur dengan jelas. Ini membuat **informasi menjadi lebih terorganisir, mudah dibaca, dan dipahami.** Setiap baris tabel mewakili sebuah sampel tes yang dilakukan, dengan kolom-kolom yang menyajikan informasi spesifik seperti waktu respon, kode status, waktu pengiriman permintaan, dan lainnya.
 
 ### [Kelebihan]
 
-**Kelebihan dari metode Table** adalah kemampuannya untuk menyajikan data secara ringkas dan terstruktur. Dengan tampilan tabel yang mudah dimengerti, pengguna dapat dengan cepat melihat dan menganalisis hasil tes tanpa terlalu rumit.
+Kelebihan dari metode Table adalah kemampuannya untuk **menyajikan data secara ringkas dan terstruktur.** Dengan tampilan tabel yang mudah dimengerti, pengguna dapat dengan cepat melihat dan menganalisis hasil tes tanpa terlalu rumit.
 
 ## Kasus Tertentu
 
