@@ -13,7 +13,7 @@ https://youtu.be/WWsiMULzkdw
 
 ## Test Result:
 
-```json
+```
 Number of Samples: 1000
 Latest Sample: 38 ms
 Average: 161 ms
