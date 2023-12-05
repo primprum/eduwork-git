@@ -39,5 +39,3 @@ Feature: Info Pendakian
 ## [Remote Device] Test Demo
 
 [![Test Demo](https://img.youtube.com/vi/7NujAfctBWc/maxresdefault.jpg)](https://www.youtube.com/embed/7NujAfctBWc)
-
-[<img src="https://img.youtube.com/vi/7NujAfctBWc/maxresdefault.jpg" />](https://www.youtube.com/embed/7NujAfctBWc)
