@@ -97,7 +97,7 @@ Evaluate how well the system can scale up or down in terms of performance as the
 
 #### [Scalability Testing Example]:
 
-Gradually increase the number of concurrent users on a web application and assess its performance at different levels of load.
+**_Gradually increase the number of concurrent users on a web application and assess its performance at different levels of load._**
 
 > Identify the point at which the system starts to degrade or exhibit performance issues.
 
@@ -109,6 +109,18 @@ Assess the system's stability and performance over an extended period under norm
 
 #### [Endurance Testing Example]:
 
-Run a continuous simulation of user interactions on a banking system for 24 hours, including transactions, account inquiries, and other typical operations.
+**_Run a continuous simulation of user interactions on a banking system for 24 hours, including transactions, account inquiries, and other typical operations._**
 
 > Monitor for memory leaks, resource leaks, and assess the system's reliability over the extended duration.
+
+<br>
+
+#### Security Testing:
+
+Identify vulnerabilities, weaknesses, and potential threats that could compromise the confidentiality, integrity, and availability of the system.
+
+#### [Security Testing Example]:
+
+**_Scan the application for common vulnerabilities, such as SQL injection, cross-site scripting (XSS), and insecure configurations._**
+
+More about it => [Understanding Security Testing](https://github.com/primprum/eduwork-git/tree/master/Security%20Testing)
