@@ -1,4 +1,4 @@
-# Tool alternatif selain JMeter
+# Contoh tool alternatif selain JMeter
 
 ## Gatling
 
